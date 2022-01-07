@@ -10,12 +10,14 @@
   <h1>HTML Essential Training</h1>
   <h2>HTML Syntax</h2>
   <nav role="navigation">
-    <p><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></p>
-    <p><a href="syntax.htm" title="HTML syntax">HTML syntax</a></p>
-    <p><a href="structure.htm" title="Structuring pages">Structuring pages</a></p>
-    <p><a href="links.htm" title="Creating links">Creating links</a></p>
-    <p><a href="reference.htm" title="HTML Reference">HTML reference</a></p>
-    <p><a href="next.htm" title="Next steps">Next steps</a></p>
+    <ul>
+      <li><a href="intro.htm" title="Introduction to HTML">Introduction to HTML</a></li>
+      <li><a href="syntax.htm" title="HTML syntax">HTML syntax</a></li>
+      <li><a href="structure.htm" title="Structuring pages">Structuring pages</a></li>
+      <li><a href="links.htm" title="Creating links">Creating links</a></li>
+      <li><a href="reference.htm" title="HTML Reference">HTML reference</a></li>
+      <li><a href="next.htm" title="Next steps">Next steps</a></li>
+    </ul>
   </nav>
 </header>
 <main role="main">
@@ -45,12 +47,14 @@
     <section>
       <h3>DOCTYPES</h3>
       <p>If you&rsquo;ve looked at HTML pages before, you&rsquo;ve probably noticed a long, somewhat intimidating tag just before the opening HTML tag. This is a doctype declaration and it&rsquo;s a very important but often misunderstood component of HTML pages. Essentially, it tells the user agent parsing your page which version of HTML (or XHTML) to expect, so that it knows which syntax rules to use when rendering your page. The doctype you use should be based on the version of HTML you&rsquo;re using to author the page. While that all sounds good in theory, in reality most of the time a doctype is simply triggering &ldquo;standards-mode&rdquo; rather than &ldquo;quirks mode&rdquo; (based on older browsers non-standard way of rendering pages). For that reason alone, all HTML documents should be preceded by a doctype declaration. For more information on doctypes, and the history behind them, check out Mark Pilgrim&rsquo;s excellent section on doctypes from his <em><a href="http://diveintohtml5.info/semantics.html#the-doctype" title="Dive into HTML5">Dive Into HTML5</a></em> book. Here are some of the more common HTML doctypes:</p>
-      <h4 class="dtd">HTML 4.0 transitional</h4>
-      <pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code></pre>
-      <h4 class="dtd">XHTML 1.0 Transitional</h4>
-      <pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</code></pre>
-      <h4 class="dtd">HTML5</h4>
-      <pre><code>&lt;!DOCTYPE HTML&gt;</code>
+      <ol>
+        <h4 class="dtd"><li>HTML 4.0 transitional</li></h4>
+        <pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;</code></pre>
+        <h4 class="dtd"><li>XHTML 1.0 Transitional</li></h4>
+        <pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;</code></pre>
+        <h4 class="dtd"><li>HTML5</li></h4>
+        <pre><code>&lt;!DOCTYPE HTML&gt;</code>
+        </ol>
 </pre>
     </section>
     <section>
