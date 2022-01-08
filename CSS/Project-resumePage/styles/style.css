@@ -5,6 +5,7 @@ html {
 
 body {
   margin: 0;
+  z-index: 1;
   font-family: 'Open sans';
 }
 
@@ -45,7 +46,9 @@ li {
   width: 20rem;
   border-radius: 50%;
   border: 10px solid #f1f1f1;
+  margin: 0 0 2rem 0;
   overflow: hidden;
+  box-shadow: 0px 0px 30px 7px #000000
 }
 
 .title-circle {
@@ -75,6 +78,10 @@ p {
 
 .header-info {
   background: linear-gradient(45deg, #072ba1, #d60000);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 94%, 50% 100%, 0 94%);
+  padding-bottom: 5rem;
+  margin-bottom: -7rem;
+  box-shadow: 0px 0px 10px 10px #000000;
 }
 
 .contact-info {
@@ -102,7 +109,7 @@ li {
 
 @media screen and (min-width: 768px) {
   .profile-picture {
-    margin-right: 2rem;
+    margin: 0 2rem;
     float: left;
   }
   .flexCenter {
@@ -111,6 +118,10 @@ li {
   .col-right {
     margin-top: 1rem;
     text-align: start;
+  }
+  .header-info {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 83%, 50% 100%, 0 83%);
+    margin-bottom: -7rem;
   }
 }
 
@@ -124,6 +135,7 @@ li {
   position: fixed;
   left: 25%;
   right: 25%;
+  z
 }
 
 .nav-bar ul {
@@ -172,15 +184,12 @@ li {
 }
 
 .skills {
-  background: linear-gradient(
-      rgba(83, 83, 83, 0.8),
-      rgba(93, 104, 84, 0.6)
-    ),
+  background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(62, 68, 57, 0.6)),
     url(../images/joan-gamell-ZS67i1HLllo-unsplash.jpg) no-repeat fixed;
   background-size: cover;
 }
 
-.skills li {
+.skills {
   color: #ffffff;
   font-weight: 500;
   font-size: 2rem;
@@ -192,7 +201,7 @@ li {
   flex-direction: column;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .flexCenter {
     display: inline;
   }
