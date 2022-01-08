@@ -13,28 +13,49 @@
     />
   </head>
   <body>
+    
+    </nav>
     <!-- // Intro -->
-    <header>
-      <img
-        src="/Project-resumePage/images/my-picture.png"
-        alt="Petrisor Buciuta picture"
-        width="64"
-      />
-      <h1>Petrisor Buciuta</h1>
-      <h2>Junior Front End Web Developer</h2>
-      <p>
-        Add your profile summary here. You can have several paragraphs or add
-        links.
-      </p>
+    <header class="header-info">
+      <nav>
+        <div class="nav-bar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      <div class="container">
+        <div class="flexCenter">
+          <img
+            src="/CSS/Project-resumePage/images/my-picture.png"
+            alt="Petrisor Buciuta picture"
+            class="profile-picture"
+          />
+        </div>
+        <div class="col-right">
+          <h1>Petrisor Buciuta</h1>
+          <h2>Junior Front End Web Developer</h2>
+          <p>
+            Add your profile summary here. You can have several paragraphs or
+            add links.
+          </p>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <main class="container about-me">
       <section>
         <h2>Skills</h2>
         <ul>
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Bootstrap</li>
+          <li>SASS</li>
+          <li>PHP</li>
+          <li>JQuery</li>
+          <li>Ajax</li>
         </ul>
       </section>
       <!-- // Work Experience -->
@@ -61,12 +82,11 @@
     </main>
 
     <!-- // Footer & contact info -->
-    <footer>
+    <footer class="contact-info">
       <h2>Let's Keep in Touch!</h2>
 
       <!-- Social media and contact links. Add or remove any networks. -->
       <div>
-        <a href="mailto:email@example.com">email@example.com</a>
         <a href="https://petrizer.com/#section_3" target="_blank"
           >My Website!</a
         >
@@ -77,7 +97,7 @@
         >
       </div>
 
-      <p>Copyright 2021 by me.</p>
+      <p class="copyright">Copyright 2021 by me.</p>
     </footer>
   </body>
 </html>
