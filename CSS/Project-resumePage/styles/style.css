@@ -44,6 +44,7 @@ li {
   width: 20rem;
   border-radius: 50%;
   border: 10px solid #f1f1f1;
+  overflow: hidden;
 }
 
 .flexCenter {
@@ -145,4 +146,8 @@ li {
     font-size: 2.5rem;
     margin: 0 1.5rem;
   }
+}
+
+.profile-picture {
+  text-align: center;
 }
