@@ -120,7 +120,7 @@ li {
     text-align: start;
   }
   .header-info {
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 83%, 50% 100%, 0 83%);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 100% 86%, 50% 100%, 0 86%);
     margin-bottom: -7rem;
   }
 }
@@ -132,10 +132,10 @@ li {
 /* Navigation Bar */
 
 .nav-bar {
-  position: fixed;
-  left: 25%;
-  right: 25%;
-  z
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-bar ul {
