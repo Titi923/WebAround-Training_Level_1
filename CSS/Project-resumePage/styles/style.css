@@ -94,9 +94,6 @@ p {
   margin: 2rem 0 0 0;
 }
 
-.flexCenter {
-}
-
 /* lists */
 li {
   padding: 0.5rem;
@@ -140,10 +137,10 @@ li {
 .nav-bar li {
   display: inline-block;
   font-size: 1.5rem;
-  margin: 0;  
+  margin: 0;
   font-weight: bold;
   background: #000000;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   transition: background 0.5s ease;
 }
 
@@ -168,4 +165,35 @@ li {
 
 .profile-picture {
   text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.skills {
+  background: linear-gradient(
+      rgba(83, 83, 83, 0.8),
+      rgba(93, 104, 84, 0.6)
+    ),
+    url(../images/joan-gamell-ZS67i1HLllo-unsplash.jpg) no-repeat fixed;
+  background-size: cover;
+}
+
+.skills li {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width:768px) {
+  .flexCenter {
+    display: inline;
+  }
 }
