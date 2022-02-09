@@ -1040,7 +1040,6 @@ Front page styles
   padding: 3em;
   background: #b51c35;
   text-align: center;
-  transition: max-height 5s ease;
 }
 
 .cta a {
@@ -1051,15 +1050,24 @@ Front page styles
   color: #fffced;
   text-decoration: none;
   border: 5px solid #fffced;
-  transition: max-height 5s ease;
-  max-height: 120px;
+  transition: max-height 1.5s ease;
 }
 
+@media screen and (min-width: 40em) {
+  .cta a {
+    font-size: 3em;
+    border-width: 10px;
+  }
+}
 
 .cta a:focus,
 .cta a:hover {
   background: #fffced;
   color: #b51c35;
+}
+
+a {
+  max-height: 70px;
 }
 
 /*--------------------------------------------------------------
@@ -1073,7 +1081,6 @@ Booking info
 .hide {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 3s ease;
 }
 
 .booking-info .content-title {
