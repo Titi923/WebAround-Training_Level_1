@@ -23,8 +23,9 @@ for (let i = 0; i<IMAGES.length; i++) {
     let imgSrc = IMAGES[i].getAttribute("src");
     imgSrc = imgSrc.slice(0,-8);
     let srcset = makeSrcset(imgSrc);
-    console.log(srcset);
+    IMAGES[i].setAttribute("srcset", srcset);
 
     let type = IMAGES[i].getAttribute("data-type");
-    console.log(type);
+    let sizes = SIZES[type];
+    IMAGES[i].setAttribute("sizes", sizes);
 }
