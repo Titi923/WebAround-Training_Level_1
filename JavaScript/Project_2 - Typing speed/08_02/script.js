@@ -4,6 +4,7 @@ const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
 
+var timer = [0,0,0,0];
 
 // Add leading zero to numbers 9 or below (purely for aesthetics):
 function leadingZero(time) {
@@ -13,10 +14,9 @@ function leadingZero(time) {
     return time;
 }
 
-
 // Run a standard minute/second/hundredths timer:
 function runTimer() {
-    let currentTime = timer[0] + ":" + timer[1] + ":" + timer[2];
+    let currentTime = leadingZero(timer[0]) + ":" + leadingZero(timer[1]) + ":" + leadingZero(timer[2]);
     theTimer.innerHTML = currentTime;
     timer[3]++;
 
@@ -26,23 +26,37 @@ function runTimer() {
 }
 
 // Match the text entered with the provided text on the page:
-const spellCheck = function() {
+function spellCheck() {
     let textEntered = testArea.value;
-    console.log(textEntered);
+    let originTextMatch = originText.substring(0,textEntered.length);
+
+    if (textEntered == originText) {
+        testWrapper.style.borderColor = "#429890";
+    } else {
+        if (textEntered == originTextMatch) {
+            testWrapper.style.borderColor = "#65CCf3";
+        } else {
+            testWrapper.style.borderColor = "#E95D0F";
+        }
+    }
+    
 }
 
 // Start the timer:
-const start = function() {
-    let textEnteredLength = testArea.value.length;
-    console.log(textEnteredLength);
+function start() {
+    let textEnterdLength = testArea.value.length;
+    if (textEnterdLength === 0) {
+        setInterval(runTimer, 10);
+    }
+    console.log(textEnterdLength);
 }
 
 // Reset everything:
-const reset = function() {
-
+function reset() {
+    console.log("reset button has been pressed!");
 }
 
-// Event listeners for keyboard input and the reset button:
-testArea.addEventListener('keypress', start)
-testArea.addEventListener('keyup', spellCheck)
-resetButton.addEventListener("click", reset)
+// Event listeners for keyboard input and the reset
+testArea.addEventListener("keypress", start, false);
+testArea.addEventListener("keyup", spellCheck, false);
+resetButton.addEventListener("click", reset, false);
