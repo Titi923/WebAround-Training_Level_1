@@ -1,0 +1,1 @@
+<a href="./linked_page.php">Go to the Linked Page.</a>
