@@ -215,6 +215,17 @@ li {
   margin-top: 2rem;
 }
 
+.btn--red {
+  background: #d80d0d;
+  border: 0;
+  padding: 0.8rem;
+  border-radius: 4px;
+  color: #ffffff;
+  width: 23rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
 /* Flex */
 .flex-center {
   display: flex;
