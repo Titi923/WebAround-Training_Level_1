@@ -56,7 +56,10 @@ foreach ($_POST as $key => $value) {
             $message .= ucfirst($field) . ": $val\r\n\r\n";
             }
             $message = wordwrap($message, 70);
-            $mailSent = true;
+            $mailSent = mail($to, $subject, $message, $headers, $authorized);
+            if (!$mailSent) {
+                $errors['mailfail'] = true;
+            }
         }
     }
 }
