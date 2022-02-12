@@ -4,10 +4,16 @@ $missing= [];
 if (isset($_POST['send'])) {
    $expected = ['name', 'email', 'message'];
    $required = ['name', 'message'];
+   $to = 'Petrisor Buciuta <petrisor.buciutaa@gmail.com>';
+   $subject = 'Feedback from online form';
+   $headers = [];
+   $headers = ['From: petrisor.buciutaa@gmail.com'];
+   $headers = ['Cc: another@example.com'];
+   $headers = ['Content-type: text/plain; charset=utf-8'];
+   $authorized = null;
    require './process_email.php';
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,10 +50,11 @@ if (isset($_POST['send'])) {
       </p>
       <p>
         <label for="email">Email:
-          <?php if ($missing && in_array('email', $missing)) {
-        ?>
-        <span class="warning">Please enter your email</span>
-        <?php }?>  
+        <?php if ($missing && in_array('email', $missing)) : ?>
+          <span class="warning">Please enter your email</span>
+        <?php elseif (isset($errors['email'])) : ?>
+          <span class="warning">Invalid email address</span>
+        <?php endif; ?>  
       </label>
         <input type="email" name="email" id="email" 
         <?php
@@ -80,6 +87,18 @@ if (isset($_POST['send'])) {
       <p>
         <input type="submit" name="send" id="send" value="Send Messages" />
       </p>
-    </form>
+    </form> 
+    <pre>
+
+    <?php
+      if ($_POST && $mailSent) {
+        echo "Message: \n\n";
+        echo htmlentities($message);
+        echo "Headers: \n\n";
+        echo htmlentities($headers);
+      }
+    ?>
+
+    </pre>
   </body>
 </html>

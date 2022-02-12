@@ -1,4 +1,6 @@
 <?php
+$mailSent = false;
+
 $suspect = false;
 $pattern = '/Content-type:|Bcc:|Cc:/i';
 
@@ -24,6 +26,37 @@ foreach ($_POST as $key => $value) {
         $$key = '';
     } elseif (in_array($key, $expected)) {
         $$key = $value;
+        }
+    }
+    // Validate user's email
+    if (!$missing && !empty($email)) {
+        $validemail = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
+        if ($validemail) {
+            $headers[] = "Reply-to: $validemail";
+        } else {
+            $errors['email'] = true;
+        }
+        // If not errors, create headers and message buddy
+        if (!$errors && !$missing) {
+            $headers = implode("\r\n", $headers);
+            // Initalize message
+            $message = '';
+            foreach ($expected as $field) {
+                if (isset($$field) && !empty($$field)) {
+                    $val = $$field;
+                } else {
+                    $val = 'Not selected';
+                }
+            // If an array, expand to a comma-separated string
+            if (is_array($val)) {
+                $val = implode(', ', $val);
+            }
+            // Replace underscores in the field names with spaces
+            $field = str_replace('_', ' ', $field);
+            $message .= ucfirst($field) . ": $val\r\n\r\n";
+            }
+            $message = wordwrap($message, 70);
+            $mailSent = true;
         }
     }
 }
