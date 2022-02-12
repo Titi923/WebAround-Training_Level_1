@@ -6,7 +6,7 @@ body {
   font-size: 62.5%;
   margin: 0;
   z-index: 1;
-  font-family: 'Open sans';
+  font-family: 'Roboto', 'Open sans';
 }
 
 *,
@@ -15,7 +15,7 @@ body {
   box-sizing: inherit;
 }
 
-/* Typography */ 
+/* Typography */
 h2 {
   font-size: 1.5rem;
 }
@@ -62,7 +62,7 @@ button {
     max-width: 100%;
     height: 5.2rem;
   }
-  
+
   #booe {
     width: 8rem;
     max-width: 100%;
@@ -85,28 +85,75 @@ button {
   column-gap: 1rem;
 }
 
-
 /* pe-scurt */
-.pe-scurt {
-  outline: none;
+.pe-scurt h2{
+  margin-bottom: 2rem;
+}
+
+.pe-scurt ul {
+  padding: 0 1.5rem;
 }
 
 /* Lists */
 .list-red {
   color: red;
+  font-weight: 600;
+  list-style: none;
+}
+
+.list-red::before {
+  content: '✓ ';
+  font-weight: 500;
+  color: red;
+}
+
+.list-checkmark {
+  list-style: none;
+}
+
+.list-checkmark::before {
+  content: '✓ ';
+  font-weight: 500;
+}
+
+.list-checkmark-red {
+  list-style: none;
+}
+
+.list-checkmark-red::before {
+  content: '✓ ';
+  font-weight: 500;
+  color: red;
 }
 
 .list-plus {
+  list-style-type: none;
+}
 
+.list-plus::before {
+  content: '✚ ';
 }
 
 /* Button */
 
 .btn--green_dark {
-    background: #027c02;
-    border: 0;
-    padding: 0.6rem;
-    border-radius: 3px;
-    color: #ffffff;
-    width: 15rem;
+  background: #027c02;
+  border: 0;
+  padding: 0.6rem;
+  border-radius: 3px;
+  color: #ffffff;
+  width: 23rem;
+  margin-top: 1rem;
+}
+
+/* Flex */ 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.fb-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
