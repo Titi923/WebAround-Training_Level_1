@@ -15,6 +15,19 @@ body {
   box-sizing: inherit;
 }
 
+/* Typography */ 
+h2 {
+  font-size: 1.5rem;
+}
+
+ul {
+  font-size: 1.2rem;
+}
+
+button {
+  font-size: 1.3rem;
+}
+
 /* Container */
 .container {
   max-width: 1140px;
@@ -60,4 +73,40 @@ body {
 /* Header */
 .img-header {
   width: 100%;
+}
+
+/* Grid Two-Columns */
+.grid {
+  display: grid;
+}
+
+.grid--1x2 {
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+
+
+/* pe-scurt */
+.pe-scurt {
+  outline: none;
+}
+
+/* Lists */
+.list-red {
+  color: red;
+}
+
+.list-plus {
+
+}
+
+/* Button */
+
+.btn--green_dark {
+    background: #027c02;
+    border: 0;
+    padding: 0.6rem;
+    border-radius: 3px;
+    color: #ffffff;
+    width: 15rem;
 }
