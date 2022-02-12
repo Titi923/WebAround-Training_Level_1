@@ -135,6 +135,15 @@ button {
 }
 
 /* Lists */
+.features__content {
+  padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 885px) {
+  .features__content {
+    padding-left: 2rem;
+  }  
+}
 .grid--1x2-floats ul{
   padding-left: 0.5em;
 }
