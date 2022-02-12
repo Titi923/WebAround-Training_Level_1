@@ -42,3 +42,8 @@ body {
   height: auto;
 }
 
+/* Header */
+
+.img-header {
+  width: 100%;
+}
