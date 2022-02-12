@@ -14,11 +14,14 @@ if (isset($_POST['send'])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
     <title>Contact form</title>
   </head>
   <body>
     <h1>Contact Us</h1>
-    <?php if ($errors || $missing) {?>
+    <?php if ($_POST && $suspect) {?>
+      <span class="warning">Sorry, your email could not be sent.</span>
+    <?php }elseif ($errors || $missing) {?>
       <span class="warning">Please fix the item(s) indicated</span>
     <?php };?>  
     <form method="post" action="<?=$_SERVER['PHP_SELF'];?>">
@@ -29,7 +32,15 @@ if (isset($_POST['send'])) {
         <span class="warning">Please enter your name</span>
         <?php }?>  
       </label>
-        <input type="text" name="name" id="name" />
+      <!-- Keep the input -->
+      <input type="text" name="name" id="name"
+      <?php
+          if ($errors || $missing) {
+            echo 'value="',htmlentities($name),'"';
+          }
+          ?>
+        />
+      <!-- Keep the input -->
       </p>
       <p>
         <label for="email">Email:
@@ -38,7 +49,13 @@ if (isset($_POST['send'])) {
         <span class="warning">Please enter your email</span>
         <?php }?>  
       </label>
-        <input type="email" name="email" id="email" />
+        <input type="email" name="email" id="email" 
+        <?php
+          if ($errors || $missing) {
+            echo 'value="',htmlentities($email),'"';
+          }
+          ?>
+        />
       </p>
       <p>
         <label for="message">Message:
@@ -48,12 +65,17 @@ if (isset($_POST['send'])) {
           <?php }?>  
           </label>
           <textarea
-          for="message"
           name="message"
           id="message"
-          cols="25"
-          rows="5"
-        ></textarea>
+          cols="15"
+          rows="3"
+          >
+        <?php
+          if ($errors || $missing) {
+            echo htmlentities($message);
+          }
+          ?>
+      </textarea>
       </p>
       <p>
         <input type="submit" name="send" id="send" value="Send Messages" />
