@@ -27,12 +27,24 @@ h2 {
   font-size: 1.5rem;
 }
 
+h3 {
+  font-size: 1.3rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+
 ul {
   font-size: 1.2rem;
 }
 
 button {
   font-size: 1.3rem;
+}
+
+@media screen and (min-width: 885px) {
+  h3 {
+    text-align: start;
+  }
 }
 
 /* Container */
@@ -142,9 +154,9 @@ button {
 @media screen and (min-width: 885px) {
   .features__content {
     padding-left: 2rem;
-  }  
+  }
 }
-.grid--1x2-floats ul{
+.grid--1x2-floats ul {
   padding-left: 0.5em;
 }
 
@@ -216,13 +228,26 @@ li {
 }
 
 /* Images */
-#image-1, #image-2 {
+#image-1,
+#image-2 {
   width: 20rem;
 }
 
 @media screen and (min-width: 885px) {
-  #image-1, #image-2 {
+  #image-1,
+  #image-2 {
     width: 100%;
     padding: 0 0.5rem;
+  }
+}
+
+/* Section About-Workshop*/
+.about-workshop ul {
+  padding-left: 0.5rem;
+}
+
+@media screen and (min-width: 885px) {
+  .about-workshop ul {
+    padding-left: 1.5rem;
   }
 }
