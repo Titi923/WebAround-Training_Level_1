@@ -27,23 +27,37 @@ body {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  padding-bottom: 1rem;
 }
 
 /* Logos */
 #andy {
-  width: 20rem;
+  width: 10rem;
   max-width: 100%;
-  height: 5.2rem;
+  height: 3.2rem;
 }
 
 #booe {
-  width: 8rem;
+  width: 5rem;
   max-width: 100%;
   height: auto;
 }
 
-/* Header */
+@media screen and (min-width: 768px) {
+  #andy {
+    width: 20rem;
+    max-width: 100%;
+    height: 5.2rem;
+  }
+  
+  #booe {
+    width: 8rem;
+    max-width: 100%;
+    height: auto;
+  }
+}
 
+/* Header */
 .img-header {
   width: 100%;
 }
