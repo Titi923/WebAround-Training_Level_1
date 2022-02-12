@@ -1,3 +1,44 @@
-body {
-    background: #444444;
+html {
+  box-sizing: border-box;
 }
+
+body {
+  font-size: 62.5%;
+  margin: 0;
+  z-index: 1;
+  font-family: 'Open sans';
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Container */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+/* Logos */
+#andy {
+  width: 20rem;
+  max-width: 100%;
+  height: 5.2rem;
+}
+
+#booe {
+  width: 8rem;
+  max-width: 100%;
+  height: auto;
+}
+
