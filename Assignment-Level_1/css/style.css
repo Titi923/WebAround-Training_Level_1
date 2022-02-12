@@ -16,6 +16,13 @@ body {
 }
 
 /* Typography */
+h1 {
+  color: red;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 h2 {
   font-size: 1.5rem;
 }
@@ -88,6 +95,11 @@ button {
 
 
 /* Grid Two-Columns */
+.grid--1x2-floats {
+  grid-template-columns: 3fr 1fr;
+    column-gap: 1rem;
+}
+
 @media screen and (min-width: 885px) {
   .grid {
     display: grid;
@@ -107,8 +119,11 @@ button {
   }
 }
 
-
 /* Lists */
+li {
+  line-height: 1.9rem;
+}
+
 .list-red {
   color: red;
   font-weight: 600;
@@ -170,4 +185,16 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Images */
+#image-1 {
+  width: 20rem;
+}
+
+@media screen and (min-width: 885px) {
+  #image-1 {
+    width: 100%;
+    padding-right: 0.4rem;
+  } 
 }
