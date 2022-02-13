@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1><?php echo $rest_name?></h1>
-    <h2>Today's speciality is <?php echo $arr[0]?></h2>
+    <h1><?= $rest_name?></h1>
+    <h2>Today's speciality is <?= $arr[0]?></h2>
 </body>
 </html>
