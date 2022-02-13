@@ -66,6 +66,10 @@ button {
   color: #1313f5;
 }
 
+.text-upper {
+  text-transform: uppercase;
+}
+
 /* Container */
 .container {
   max-width: 1140px;
@@ -299,4 +303,44 @@ li {
 
 #text-vimeo p:first-child{
   margin-top: 4rem;
+}
+
+/* Cards */
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  border: 1px solid black;
+}
+
+.card-container ul {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+}
+
+#card-silver--text {
+  background-color: #dbd4d4;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  padding: 0.8rem;
+  text-transform: uppercase;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-price {
+  text-align: center;
+}
+
+.card-container .text-upper, .red {
+  margin: 0.7rem 0;
+}
+
+.card-container .red {
+  font-size: 1.1rem;
+  font-weight: bold;
 }
