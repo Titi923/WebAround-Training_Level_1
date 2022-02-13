@@ -70,6 +70,10 @@ button {
   color: #ebc20f;
 }
 
+.green {
+  color: #0a960a;
+}
+
 .text-upper {
   text-transform: uppercase;
 }
@@ -200,12 +204,12 @@ li {
   line-height: 1.9rem;
 }
 
-.list-yellow-checkmark {
+.list-checkmark-yellow {
   font-weight: 600;
   list-style: none;
 }
 
-.list-yellow-checkmark::before {
+.list-checkmark-yellow::before {
   content: '✓ ';
   font-weight: 500;
   color: #ffd000;
@@ -223,13 +227,12 @@ li {
   color: #15a810;
 }
 
-.list-green-checkmark {
-  color: #15a810;
+.list-checkmark-green {
   font-weight: 600;
   list-style: none;
 }
 
-.list-green-checkmark::before {
+.list-checkmark-green::before {
   content: '✓ ';
   font-weight: 500;
 }
@@ -375,6 +378,16 @@ li {
   color: #ffffff;
   font-size: 1.7rem;
   background-color: #e6d709;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+#card-diamond--text {
+  color: #ffffff;
+  font-size: 1.7rem;
+  background-color: #2da508;
   text-align: center;
   margin: 0 0 0.5rem 0;
   padding: 0.5rem;
