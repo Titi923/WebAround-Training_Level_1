@@ -454,6 +454,7 @@ a {
   background: #c8ffc8;
   font-size: 1.2rem;
   line-height: 1.9rem;
+  margin: 2rem 1rem;
 }
 
 .green-card li {
@@ -571,8 +572,13 @@ td:nth-child(3) {
 
 /* Map */
 #map {
-  height: 40rem;
+  height: 35rem;
   /* The height is 400 pixels */
   width: 100%;
   /* The width is the width of the web page */
+  margin: 3rem 0;
+}
+
+#img_clock {
+  margin-top: 3rem;
 }
