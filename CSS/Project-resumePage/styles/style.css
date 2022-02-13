@@ -185,7 +185,7 @@ li {
 
 .skills {
   background: linear-gradient(rgba(44, 44, 44, 0.8), rgba(62, 68, 57, 0.6)),
-    url(../images/joan-gamell-ZS67i1HLllo-unsplash.jpg) no-repeat fixed;
+    url(./images/joan-gamell-ZS67i1HLllo-unsplash.jpg) no-repeat fixed;
   background-size: cover;
 }
 
