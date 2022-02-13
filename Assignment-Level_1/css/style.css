@@ -148,10 +148,12 @@ button {
   column-gap: 1rem;
 }
 
-.grid--1x3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 1.5rem;
+@media screen and (min-width: 768px) {
+  .grid--1x3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.5rem;
+  }
 }
 
 .grid--1x5 img {
@@ -361,14 +363,11 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* width: 30%; */
-  /* height: 40rem; */
-  border: 1px solid black;
 }
 
 .card-container ul {
   padding-left: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 #card-silver--text {
@@ -388,6 +387,7 @@ li {
   margin: 0 0 0.5rem 0;
   padding: 0.5rem;
   text-transform: uppercase;
+  
 }
 
 #card-diamond--text {
@@ -405,6 +405,7 @@ li {
 }
 
 .card-price {
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -420,4 +421,15 @@ li {
 
 .card-container .text-upper {
   margin: 0;
+}
+
+#gold {
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+
+.card-container .text-center {
+  font-size: 1.2rem;
+  padding: 0 1rem;
 }
