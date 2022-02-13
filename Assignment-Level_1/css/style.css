@@ -440,3 +440,64 @@ li {
   font-size: 1.3rem;
 }
 
+/* Greencard section */
+
+.green-card {
+  border: 1px solid black;
+  background: #c8ffc8;
+  font-size: 1.2rem;
+  line-height: 1.9rem;
+}
+
+.green-card li {
+  margin: 1rem 1.5rem 0;
+}
+.green-card ol {
+  padding: 0 2rem;
+}
+
+/* Table */
+
+.styled-table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1rem;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+  background-color: #f3f3f3;
+}
+
+.tables {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.styled-table img {
+  width: 10rem;
+  height: 6.5rem;
+}
+
+td:first-child {
+  text-decoration: underline;
+}
