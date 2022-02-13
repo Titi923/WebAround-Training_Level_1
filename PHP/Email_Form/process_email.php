@@ -1,31 +1,31 @@
 <?php
 $mailSent = false;
-
 $suspect = false;
 $pattern = '/Content-type:|Bcc:|Cc:/i';
 
-function isSuspect($value, $pattern, &$suspect) {
-    if(is_array($value)) {
+function isSuspect($value, $pattern, &$suspect)
+{
+    if (is_array($value)) {
         foreach ($value as $item) {
             isSuspect($item, $pattern, $suspect);
-            }
-        } else {
-            if (preg_match($pattern, $value)) {
-                $suspect = true;
-            }
+        }
+    } else {
+        if (preg_match($pattern, $value)) {
+            $suspect = true;
         }
     }
+}
 
 isSuspect($_POST, $pattern, $suspect);
 
-if(!$suspect) {
-foreach ($_POST as $key => $value) {
-    $value = is_array($value) ? $value : trim($value);
-    if(empty($value) && in_array($key, $required)) {
-        $missing[] = $key;
-        $$key = '';
-    } elseif (in_array($key, $expected)) {
-        $$key = $value;
+if (!$suspect) {
+    foreach ($_POST as $key => $value) {
+        $value = is_array($value) ? $value : trim($value);
+        if (empty($value) && in_array($key, $required)) {
+            $missing[] = $key;
+            $$key = '';
+        } elseif (in_array($key, $expected)) {
+            $$key = $value;
         }
     }
     // Validate user's email
@@ -47,13 +47,13 @@ foreach ($_POST as $key => $value) {
                 } else {
                     $val = 'Not selected';
                 }
-            // If an array, expand to a comma-separated string
-            if (is_array($val)) {
-                $val = implode(', ', $val);
-            }
-            // Replace underscores in the field names with spaces
-            $field = str_replace('_', ' ', $field);
-            $message .= ucfirst($field) . ": $val\r\n\r\n";
+                // If an array, expand to a comma-separated string
+                if (is_array($val)) {
+                    $val = implode(', ', $val);
+                }
+                // Replace underscores in the field names with spaces
+                $field = str_replace('_', ' ', $field);
+                $message .= ucfirst($field) . ": $val\r\n\r\n";
             }
             $message = wordwrap($message, 70);
             $mailSent = mail($to, $subject, $message, $headers, $authorized);
