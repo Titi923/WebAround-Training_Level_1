@@ -20,6 +20,10 @@ body {
 }
 
 /* Typography */
+p {
+  font-size: 1.3rem;
+}
+
 h1 {
   color: var(--color-headings);
   font-size: 1.5rem;
@@ -52,6 +56,14 @@ button {
   h3 {
     text-align: start;
   }
+}
+
+.red {
+  color: #f10c0c;
+}
+
+.blue {
+  color: #1313f5;
 }
 
 /* Container */
@@ -270,4 +282,16 @@ li {
   .about-workshop ul {
     padding-left: 1.5rem;
   }
+}
+
+#text-vimeo {
+  padding-left: 1rem;
+}
+
+#text-vimeo p{
+  margin: 3rem 0;
+}
+
+#text-vimeo p:first-child{
+  margin-top: 4rem;
 }
