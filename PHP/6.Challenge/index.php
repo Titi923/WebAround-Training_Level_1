@@ -12,12 +12,10 @@
 <body>
     <table>
         <?php
-        echo "<th> </th>";
-        for ($row = 1, $col = 1; $row <= 10; $row++) {
-            $res = $row * $col;
+        for ($row = 1; $row <= 10; $row++) {
             echo '<tr>';
             for ($a = 1; $a <= 10; $a++) {
-                echo "<th>";
+                echo "<th>&nbsp;";
                 echo $a * $row;
                 echo "</th>";
             }
