@@ -192,6 +192,40 @@ li {
   line-height: 1.9rem;
 }
 
+.list-yellow {
+  font-weight: 600;
+  list-style: none;
+}
+
+.list-yellow::before {
+  content: '✓ ';
+  font-weight: 500;
+  color: #ffd000;
+}
+
+.list-green {
+  color: #15a810;
+  font-weight: 600;
+  list-style: none;
+}
+
+.list-green::before {
+  content: '✓ ';
+  font-weight: 500;
+  color: #15a810;
+}
+
+.list-green-checkmark {
+  color: #15a810;
+  font-weight: 600;
+  list-style: none;
+}
+
+.list-green-checkmark::before {
+  content: '✓ ';
+  font-weight: 500;
+}
+
 .list-red {
   color: red;
   font-weight: 600;
@@ -321,10 +355,21 @@ li {
 }
 
 #card-silver--text {
+  font-size: 1.7rem;
   background-color: #dbd4d4;
   text-align: center;
   margin: 0 0 0.5rem 0;
-  padding: 0.8rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
+}
+
+#card-gold--text {
+  color: #ffffff;
+  font-size: 1.7rem;
+  background-color: #e6d709;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5rem;
   text-transform: uppercase;
 }
 
