@@ -66,8 +66,16 @@ button {
   color: #1313f5;
 }
 
+.yellow {
+  color: #ebc20f;
+}
+
 .text-upper {
   text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /* Container */
@@ -192,12 +200,12 @@ li {
   line-height: 1.9rem;
 }
 
-.list-yellow {
+.list-yellow-checkmark {
   font-weight: 600;
   list-style: none;
 }
 
-.list-yellow::before {
+.list-yellow-checkmark::before {
   content: '✓ ';
   font-weight: 500;
   color: #ffd000;
@@ -331,11 +339,11 @@ li {
   padding-left: 1rem;
 }
 
-#text-vimeo p{
+#text-vimeo p {
   margin: 3rem 0;
 }
 
-#text-vimeo p:first-child{
+#text-vimeo p:first-child {
   margin-top: 4rem;
 }
 
@@ -381,11 +389,16 @@ li {
   text-align: center;
 }
 
-.card-container .text-upper, .red {
+.card-container .text-upper,
+.red {
   margin: 0.7rem 0;
 }
 
 .card-container .red {
   font-size: 1.1rem;
   font-weight: bold;
+}
+
+.card-container .text-upper {
+  margin: 0;
 }
