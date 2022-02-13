@@ -434,7 +434,7 @@ li {
   padding: 0 1rem;
 }
 
-.btn--red, .btn--green_dark > a {
+a {
   text-decoration: none;
   text-align: center;
   font-size: 1.3rem;
@@ -477,7 +477,7 @@ li {
 
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
+    padding: 0.8rem 0.3rem;
 }
 
 .styled-table tbody tr {
@@ -498,6 +498,14 @@ li {
   height: 6.5rem;
 }
 
+.styled-table .btn--green_dark {
+  width: 26rem;
+}
+
 td:first-child {
   text-decoration: underline;
+}
+
+td:nth-child(3) {
+  text-transform: capitalize;
 }
