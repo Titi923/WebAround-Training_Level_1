@@ -11,29 +11,33 @@
 
 <body>
     <table>
-        <!-- First row of the table! -->
         <?php
-        echo '<tr>';
-        echo '<th> </th>';
-        for ($col = 1; $col <= 10; $col++) {
-            echo "<th>$col</th>";
-        }
-        echo '</tr>';
-        // Create rest of rows
+        echo "<th> </th>";
         for ($row = 1, $col = 1; $row <= 10; $row++) {
+            $res = $row * $col;
             echo '<tr>';
-            // First cell
-            if ($col == 1) {
-                echo "<th>$row</th>";
-            }
-            while ($col <= 10) {
-                echo '<td>', $row * $col++, '</td>';
+            for ($a = 1; $a <= 10; $a++) {
+                echo "<th>";
+                echo $a * $row;
+                echo "</th>";
             }
             echo '</tr>';
-            // Reset col at the end of each row
-            $col = 1;
         }
         ?>
+        <!-- <th>A</th>
+        <th>B</th>
+        <th>C</th>
+        <tr>
+            <th>a
+            <th>b</th>
+            </th>
+        </tr>
+        <tr>
+            <th>b</th>
+        </tr>
+        <tr>
+            <th>c</th>
+        </tr> -->
     </table>
 </body>
 
