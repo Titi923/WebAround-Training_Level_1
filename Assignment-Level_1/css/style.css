@@ -243,12 +243,22 @@ li {
   color: #15a810;
 }
 
+.list-checkmark {
+  list-style: none;
+}
+
+.list-checkmark::before {
+  content: '✓ ';
+  font-weight: 500;
+}
+
 .list-checkmark-green {
   font-weight: 600;
   list-style: none;
 }
 
 .list-checkmark-green::before {
+  color: #15a810;
   content: '✓ ';
   font-weight: 500;
 }
@@ -263,15 +273,6 @@ li {
   content: '✓ ';
   font-weight: 500;
   color: red;
-}
-
-.list-checkmark {
-  list-style: none;
-}
-
-.list-checkmark::before {
-  content: '✓ ';
-  font-weight: 500;
 }
 
 .list-checkmark-red {
