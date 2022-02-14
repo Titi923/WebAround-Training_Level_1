@@ -4,7 +4,6 @@
 
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -220,6 +219,17 @@ li {
   line-height: 1.9rem;
 }
 
+.list_checkmark_green {
+  font-weight: 600;
+  list-style: none;
+}
+
+.list_checkmark_green::before {
+  color: #15a810;
+  content: '✓ ';
+  font-weight: 500;
+}
+
 .list-checkmark-yellow {
   font-weight: 600;
   list-style: none;
@@ -231,34 +241,11 @@ li {
   color: #ffd000;
 }
 
-.list-green {
-  color: #15a810;
-  font-weight: 600;
-  list-style: none;
-}
-
-.list-green::before {
-  content: '✓ ';
-  font-weight: 500;
-  color: #15a810;
-}
-
 .list-checkmark {
   list-style: none;
 }
 
 .list-checkmark::before {
-  content: '✓ ';
-  font-weight: 500;
-}
-
-.list-checkmark-green {
-  font-weight: 600;
-  list-style: none;
-}
-
-.list-checkmark-green::before {
-  color: #15a810;
   content: '✓ ';
   font-weight: 500;
 }
