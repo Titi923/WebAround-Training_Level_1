@@ -14,14 +14,25 @@ function initMap() {
   });
 }
 
-// const myLatLng = { lat: -25.363, lng: 131.044 };
-//   const map = new google.maps.Map(document.getElementById("map"), {
-//     zoom: 4,
-//     center: myLatLng,
-//   });
+function startTimer(duration, display) {
+  let timer = duration, minutes, seconds;
+  setInterval(function () {
+      minutes = parseInt(timer / 60, 10);
+      seconds = parseInt(timer % 60, 10);
 
-//   new google.maps.Marker({
-//     position: myLatLng,
-//     map,
-//     title: "Hello World!",
-//   });
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds;
+
+      if (--timer < 0) {
+          display = "00:00:00"
+      }
+  }, 1000);
+}
+
+window.onload = function () {
+  var fifteenMinutes = 60 * 15,
+      display = document.querySelector('#time');
+  startTimer(fifteenMinutes, display);
+};
