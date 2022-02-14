@@ -688,3 +688,7 @@ td:nth-child(3) {
 .grid ul {
   padding: 0 0.5rem 0 1rem;
 }
+
+.thanks {
+  margin: 4rem 0;
+}
