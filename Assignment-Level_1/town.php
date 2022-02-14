@@ -178,31 +178,6 @@ if (isset($_POST['send'])) {
     </div>
     <!-- Price contnet -->
     <h1>Te rugam sa completezi campurile,<br>pentru a putea face comanda</h1>
-    <!-- <section >
-  <form class="contact-wrapper" method="post" action="">
-    <p>
-      <label for="name">Nume
-      </label>
-      <input type="text" name="name" id="name"/>
-    </p>
-    <p>
-      <label for="email">Email
-      </label>
-      <input type="email" name="email" id="email"/>
-    </p>
-    <p>
-      <label for="message">Observatii (Optional)
-      </label>
-      <textarea name="message" id="message" rows="5">
-      </textarea>
-    </p>
-    <p>
-      <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
-    </p>
-  </form>
-
-</section> -->
-<!-- php -->
 <section class="container flex-center">
   <?php if ($_POST && ($suspect || isset($errors['mailfail']))) { ?>
     <span class="warning">Sorry, your email could not be sent.</span>
