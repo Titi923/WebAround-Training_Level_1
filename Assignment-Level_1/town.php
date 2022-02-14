@@ -1,3 +1,22 @@
+<?php
+$errors = [];
+$missing = [];
+if (isset($_POST['send'])) {
+  $expected = ['name', 'email', 'message'];
+  $required = ['name', 'message'];
+  $to = 'Petrisor Buciuta <petrisor.buciutaa@gmail.com>';
+  $subject = 'Feedback from online form';
+  $headers = ['From: petrisor.buciutaa@gmail.com'];
+  array_push($headers, 'Cc: another@example.com', 'Content-type: text/plain; charset=utf-8');
+  $authorized = '-fpetrisor.buciutaa@gmail.com';
+  require './process_email.php';
+  if ($mailSent) {
+    header('Location: thanks.php');
+    exit;
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -158,6 +177,84 @@
       <button class="btn--green-select select-diamond">SELECT</button>
     </div>
     <!-- Price contnet -->
+    <h1>Te rugam sa completezi campurile,<br>pentru a putea face comanda</h1>
+    <!-- <section >
+  <form class="contact-wrapper" method="post" action="">
+    <p>
+      <label for="name">Nume
+      </label>
+      <input type="text" name="name" id="name"/>
+    </p>
+    <p>
+      <label for="email">Email
+      </label>
+      <input type="email" name="email" id="email"/>
+    </p>
+    <p>
+      <label for="message">Observatii (Optional)
+      </label>
+      <textarea name="message" id="message" rows="5">
+      </textarea>
+    </p>
+    <p>
+      <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
+    </p>
+  </form>
+
+</section> -->
+<!-- php -->
+<section class="container flex-center">
+  <?php if ($_POST && ($suspect || isset($errors['mailfail']))) { ?>
+    <span class="warning">Sorry, your email could not be sent.</span>
+  <?php } elseif ($errors || $missing) { ?>
+    <span class="warning">Please fix the item(s) indicated</span>
+  <?php }; ?>
+  <form class="contact-wrapper" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+    <p>
+      <label for="name">Name:
+        <?php if ($missing && in_array('name', $missing)) :
+        ?>
+          <span class="warning">Please enter your name</span>
+        <?php endif; ?>
+      </label>
+      <!-- Keep the input -->
+      <input type="text" name="name" id="name" <?php
+                                                if ($errors || $missing) {
+                                                  echo 'value="', htmlentities($name), '"';
+                                                } ?> />
+      <!-- Keep the input -->
+    </p>
+    <p>
+      <label for="email">Email:
+        <?php if ($missing && in_array('email', $missing)) : ?>
+          <span class="warning">Please enter your email</span>
+        <?php elseif (isset($errors['email'])) : ?>
+          <span class="warning">Invalid email address</span>
+        <?php endif; ?>
+      </label>
+      <input type="email" name="email" id="email" <?php
+                                                  if ($errors || $missing) {
+                                                    echo 'value="', htmlentities($email), '"';
+                                                  } ?> />
+    </p>
+    <p>
+      <label for="message">Message:
+        <?php if ($missing && in_array('message', $missing)) : ?>
+          <span class="warning">Please enter your message</span>
+        <?php endif; ?>
+      </label>
+      <textarea name="message" id="message" cols="15" rows="3">
+        <?php
+        if ($errors || $missing) {
+          echo htmlentities($message);
+        } ?>
+      </textarea>
+    </p>
+    <p>
+      <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
+    </p>
+  </form>
+</section>
     <section>
       <div class="flex-center-column">
         <h2>Pretul</h2>

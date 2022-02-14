@@ -681,3 +681,34 @@ td:nth-child(3) {
 .thanks {
   margin: 4rem 0;
 }
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.contact-wrapper .btn--green-select {
+  margin: 0;
+  background: #1313f5;
+  padding: 1rem;
+  width: 100%;
+}
+
+input, label {
+  text-align: center;
+  display:block;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.contact-wrapper input, textarea {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 100%;
+}
