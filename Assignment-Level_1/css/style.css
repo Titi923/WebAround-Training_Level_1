@@ -627,7 +627,7 @@ td:nth-child(3) {
 
 /* Timer */
 
-.timer {
+.timer-div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -644,7 +644,7 @@ td:nth-child(3) {
 }
 
 @media screen and (min-width: 400px) {
-  .timer {
+  .timer-div {
     font-size: 2.5rem;
   }
 }

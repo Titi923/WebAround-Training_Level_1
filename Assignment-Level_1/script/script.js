@@ -15,33 +15,42 @@ function initMap() {
 }
 
 // Countown Timer
-function startTimer(duration, display) {
-  let timer = duration,
-    minutes,
-    seconds;
-  setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+const theTimer = document.querySelector('.timer');
 
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
+let timer = [0, 0, 0, 15 * 6000];
+let interval;
+let timerRunning = false;
 
-    display.textContent = minutes + ':' + seconds;
-
-    if (--timer < 0) {
-      display = '00:00:00';
-    }
-  }, 1000);
+// Add leading zero to numbers 9 or below (purely for aesthetics):
+function leadingZero(time) {
+  if (time <= 9) {
+    time = '0' + time;
+  }
+  return time;
 }
+
+// Run a standard minute/second/hundredths timer:
+function runTimer() {
+  let currentTime =
+    leadingZero(timer[0]) +
+    ':' +
+    leadingZero(timer[1]) +
+    ':' +
+    leadingZero(timer[2]);
+  theTimer.innerHTML = currentTime;
+  timer[3]--;
+
+  timer[0] = Math.floor(timer[3] / 100 / 60);
+  timer[1] = Math.floor(timer[3] / 100 - timer[0] * 60);
+  timer[2] = Math.floor(timer[3] - timer[1] * 100 - timer[0] * 6000);
+
+  if (timer[3] <= 0) {
+    theTimer.innerHTML = '00:00:00';
+  }
+}
+
+// Start the timer:
 window.onload = function () {
-  var fifteenMinutes = 60 * 15,
-    display = document.querySelector('#time');
-  startTimer(fifteenMinutes, display);
+  timerRunning = true;
+  interval = setInterval(runTimer, 10);
 };
-
-
-// Price on php page
-
-let price = document.getElementById('thePrice').innerHTML
-price = 1;
-console.log(price);
