@@ -9,9 +9,7 @@ body {
   font-family: 'Open sans';
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -24,14 +22,12 @@ a {
 }
 
 /* typography */
-h1,
-h2 {
+h1, h2 {
   font-family: 'Caveat';
   font-size: 3rem;
 }
 
-p,
-li {
+p, li {
   font-size: 1.5rem;
 }
 
@@ -70,9 +66,7 @@ li {
   color: #fff;
 }
 
-.col-right h1,
-h2,
-p {
+.col-right h1, h2, p {
   margin-top: 0;
 }
 
