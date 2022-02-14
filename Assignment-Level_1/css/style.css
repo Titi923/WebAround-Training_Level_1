@@ -652,3 +652,38 @@ td:nth-child(3) {
 .padding-sides {
   padding: 0 1rem;
 }
+
+/* Select PHP-page */
+.btn--green-select {
+  background: #04a304;
+  border: 0;
+  padding: 0.8rem;
+  border-radius: 4px;
+  color: #ffffff;
+  width: 50%;
+  margin: 2rem 1rem;
+  font-weight: 600;
+  transition: background 1s ease;
+}
+
+.btn--green-select:hover {
+  background: #06b406;
+}
+
+.card-price {
+  bottom: 0;
+}
+
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex-center-column .price {
+  margin-top: 0;
+}
+
+.grid ul {
+  padding: 0 0.5rem 0 1rem;
+}
