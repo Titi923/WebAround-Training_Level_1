@@ -3,7 +3,7 @@ $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {
   $expected = ['name', 'email', 'message'];
-  $required = ['name', 'message'];
+  $required = ['name', 'email'];
   $to = 'Petrisor Buciuta <petrisor.buciutaa@gmail.com>';
   $subject = 'Feedback from online form';
   $headers = ['From: petrisor.buciutaa@gmail.com'];
@@ -179,14 +179,14 @@ if (isset($_POST['send'])) {
     <!-- Price contnet -->
     <h1>Te rugam sa completezi campurile,<br>pentru a putea face comanda</h1>
 <section class="container flex-center">
-  <?php if ($_POST && ($suspect || isset($errors['mailfail']))) { ?>
-    <span class="warning">Sorry, your email could not be sent.</span>
-  <?php } elseif ($errors || $missing) { ?>
-    <span class="warning">Please fix the item(s) indicated</span>
-  <?php }; ?>
   <form class="contact-wrapper" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+    <?php if ($_POST && ($suspect || isset($errors['mailfail']))) { ?>
+      <span class="warning text-center">Sorry, your email could not be sent.</span>
+    <?php } elseif ($errors || $missing) { ?>
+      <span class="warning text-center">Please fix the item(s) indicated</span>
+    <?php }; ?>
     <p>
-      <label for="name">Name:
+      <label for="name">Nume:
         <?php if ($missing && in_array('name', $missing)) :
         ?>
           <span class="warning">Please enter your name</span>
@@ -213,16 +213,9 @@ if (isset($_POST['send'])) {
                                                   } ?> />
     </p>
     <p>
-      <label for="message">Message:
-        <?php if ($missing && in_array('message', $missing)) : ?>
-          <span class="warning">Please enter your message</span>
-        <?php endif; ?>
+      <label for="message">Observatii (Optional):
       </label>
       <textarea name="message" id="message" cols="15" rows="3">
-        <?php
-        if ($errors || $missing) {
-          echo htmlentities($message);
-        } ?>
       </textarea>
     </p>
     <p>

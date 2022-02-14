@@ -712,3 +712,12 @@ input, label {
   border: 1px solid black;
   width: 100%;
 }
+
+.warning {
+  color: red;
+  font-weight: bold;
+}
+
+span.warning.text-center {
+  font-size: 1rem;
+}
