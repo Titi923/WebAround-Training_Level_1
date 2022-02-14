@@ -721,3 +721,10 @@ input, label {
 span.warning.text-center {
   font-size: 1rem;
 }
+
+select#town {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+}

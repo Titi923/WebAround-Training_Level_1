@@ -212,16 +212,18 @@ if (isset($_POST['send'])) {
             <span class="warning">Te rugam selecteaza orasul dorit.</span>
           <?php endif; ?>
         </label>
-        <select name="town" id="town">
-          <option value="" <?php
-                            if ($_POST && $town == 'Bucuresti') {
-                              echo 'selected';
-                            } ?>>Alegeti orasul</option>
-          <option value="ASD">Bucuresti</option>
-          <option value="ASD">Timisoara</option>
-          <option value="ASD">Cluj</option>
-          <option value="ASD">Oradea</option>
-        </select>
+        <div class="flex-center">
+          <select name="town" id="town">
+            <option value="" <?php
+                              if ($_POST && $town == 'Bucuresti') {
+                                echo 'selected';
+                              } ?>>Alegeti orasul</option>
+            <option value="ASD">Bucuresti</option>
+            <option value="ASD">Timisoara</option>
+            <option value="ASD">Cluj</option>
+            <option value="ASD">Oradea</option>
+          </select>
+        </div>
       </p>
       <p>
         <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
