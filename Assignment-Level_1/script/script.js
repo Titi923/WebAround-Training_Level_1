@@ -52,7 +52,7 @@ function runTimer() {
 // Start the timer:
 window.onload = function () {
   timerRunning = true;
-  // interval = setInterval(runTimer, 10);
+  interval = setInterval(runTimer, 10);
 };
 
 // select tickets
