@@ -1,4 +1,20 @@
 <?php
+// Copyright
+function copyright()
+{
+  $release_year = 2014;
+  $current_year = date('Y');
+  if ($release_year == $current_year) {
+    $final = "&copy $current_year";
+  } else {
+    $final = "&copy $release_year - $current_year";
+  }
+  return $final;
+  copyright();
+}
+
+
+// Email form
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {
@@ -293,7 +309,7 @@ if (isset($_POST['send'])) {
   </section>
   <!-- Footer -->
   <footer class="footer">
-    <p class="text-center copy">&copy; Copyright 2014-2022</p>
+    <p class="text-center copy">Copyright <?= copyright(); ?> by Andy.</p>
     <div>
       <ul class="container footer-links">
         <li>
