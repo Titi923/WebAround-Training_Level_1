@@ -7,7 +7,8 @@ if (isset($_POST['send'])) {
   $to = 'Petrisor Buciuta <petrisor.buciutaa@gmail.com>';
   $subject = 'Feedback from online form';
   $headers = ['From: petrisor.buciutaa@gmail.com'];
-  array_push($headers, 'Cc: another@example.com', 'Content-type: text/plain; charset=utf-8');
+  array_push($headers, 'Cc: another@example.com');
+  array_push($headers, 'Content-type: text/plain; charset=utf-8');
   $authorized = '-fpetrisor.buciutaa@gmail.com';
   require './process_email.php';
   if ($mailSent) {
