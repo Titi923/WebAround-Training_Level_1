@@ -72,6 +72,7 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">50 ron</p>
+            <button class="btn--green-select select-silver">SELECT</button>
           </div>
         </div>
         <!-- Card gold -->
@@ -107,6 +108,7 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">100 ron</p>
+            <button class="btn--green-select select-gold">SELECT</button>
           </div>
         </div>
         <!-- Card vip -->
@@ -153,30 +155,26 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">200 ron</p>
+            <button class="btn--green-select select-diamond">SELECT</button>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <div class="container flex-center grid grid--1x3">
-    <button class="btn--green-select select-silver">SELECT</button>
-    <button class="btn--green-select select-gold">SELECT</button>
-    <button class="btn--green-select select-diamond">SELECT</button>
-  </div>
   <!-- Price contnet -->
-  <h1>Te rugam sa completezi campurile,<br>pentru a putea face comanda</h1>
+  <h1 class="header-margins">Te rugam sa completezi campurile,<br>pentru a putea face comanda</h1>
   <section class="container flex-center">
     <form class="contact-wrapper" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
       <?php if ($_POST && ($suspect || isset($errors['mailfail']))) { ?>
         <span class="warning text-center">Sorry, your email could not be sent.</span>
       <?php } elseif ($errors || $missing) { ?>
-        <span class="warning text-center">Please fix the item(s) indicated</span>
+        <span class="warning text-center">Va rugam completati toate campurile cu *</span>
       <?php }; ?>
       <p>
-        <label for="name">Nume:
+        <label for="name">*Nume:
           <?php if ($missing && in_array('name', $missing)) :
           ?>
-            <span class="warning">Please enter your name</span>
+            <span class="warning">Va rugam sa introduceti numele</span>
           <?php endif; ?>
         </label>
         <!-- Keep the input -->
@@ -187,9 +185,9 @@ if (isset($_POST['send'])) {
         <!-- Keep the input -->
       </p>
       <p>
-        <label for="email">Email:
+        <label for="email">*Email:
           <?php if ($missing && in_array('email', $missing)) : ?>
-            <span class="warning">Please enter your email</span>
+            <span class="warning">Va rugam sa introduceti adresa de mail</span>
           <?php elseif (isset($errors['email'])) : ?>
             <span class="warning">Invalid email address</span>
           <?php endif; ?>
@@ -202,28 +200,85 @@ if (isset($_POST['send'])) {
       <p>
         <label for="message">Observatii (Optional):
         </label>
-        <textarea name="message" id="message" cols="15" rows="3">
+        <textarea name="message" id="message" cols="15" rows="5">
       </textarea>
       </p>
       <!-- Select Town -->
       <p>
-        <label for="town"> Selectati orasul
+        <label for="town">*Selectati orasul
           <?php if ($missing && in_array('town', $missing)) : ?>
             <span class="warning">Te rugam selecteaza orasul dorit.</span>
           <?php endif; ?>
         </label>
-        <div class="flex-center">
-          <select name="town" id="town">
-            <option value="" <?php
-                              if ($_POST && $town == 'Bucuresti') {
-                                echo 'selected';
-                              } ?>>Alegeti orasul</option>
-            <option value="ASD">Bucuresti</option>
-            <option value="ASD">Timisoara</option>
-            <option value="ASD">Cluj</option>
-            <option value="ASD">Oradea</option>
-          </select>
-        </div>
+      <div class="flex-center">
+        <select name="town" id="town">
+          <option value="" <?php
+                            if ($_POST && $town == '') :
+                              echo 'selected';
+                            endif; ?>>Alegeti orasul
+          </option>
+          <option value="Brasov" <?php
+                                  if ($_POST && $town == 'Brasov') :
+                                    echo 'selected';
+                                  endif; ?>>Brasov
+          </option>
+          <option value="Bucuresti" <?php
+                                    if ($_POST && $town == 'Bucuresti') :
+                                      echo 'selected';
+                                    endif; ?>>Bucuresti
+          </option>
+          <option value="Cluj-Napoca" <?php
+                                      if ($_POST && $town == 'Cluj-Napoca') :
+                                        echo 'selected';
+                                      endif; ?>>Cluj-Napoca
+          </option>
+          <option value="Constanta" <?php
+                                    if ($_POST && $town == 'Constanta') :
+                                      echo 'selected';
+                                    endif; ?>>Constanta
+          </option>
+          <option value="Craiova" <?php
+                                  if ($_POST && $town == 'Craiova') :
+                                    echo 'selected';
+                                  endif; ?>>Craiova
+          </option>
+          <option value="Galati" <?php
+                                  if ($_POST && $town == 'Galati') :
+                                    echo 'selected';
+                                  endif; ?>>Galati
+          </option>
+          <option value="Iasi" <?php
+                                if ($_POST && $town == 'Iasi') :
+                                  echo 'selected';
+                                endif; ?>>Iasi
+          </option>
+          <option value="Oradea" <?php
+                                  if ($_POST && $town == 'Oradea') :
+                                    echo 'selected';
+                                  endif; ?>>Oradea
+          </option>
+          <option value="Piatra-Neamt" <?php
+                                        if ($_POST && $town == 'Piatra-Neamt') :
+                                          echo 'selected';
+                                        endif; ?>>Piatra-Neamt
+          </option>
+          <option value="Sibiu" <?php
+                                if ($_POST && $town == 'Sibiu') :
+                                  echo 'selected';
+                                endif; ?>>Sibiu
+          </option>
+          <option value="Suceava" <?php
+                                  if ($_POST && $town == 'Suceava') :
+                                    echo 'selected';
+                                  endif; ?>>Suceava
+          </option>
+          <option value="Timisoara" <?php
+                                    if ($_POST && $town == 'Timisoara') :
+                                      echo 'selected';
+                                    endif; ?>>Timisoara
+          </option>
+        </select>
+      </div>
       </p>
       <p>
         <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
@@ -256,7 +311,7 @@ if (isset($_POST['send'])) {
       </ul>
     </div>
   </footer>
-  <script src="./script/script.js"></script>
+  <script src="./script/order-page.js"></script>
 </body>
 
 </html>
