@@ -229,7 +229,7 @@ button {
 }
 
 li {
-  line-height: 1.9rem;
+  line-height: 2rem;
 }
 
 .list_checkmark_green {
@@ -759,3 +759,4 @@ select#town {
   border-radius: 10px;
   border: none;
 }
+
