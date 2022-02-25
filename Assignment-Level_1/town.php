@@ -12,8 +12,6 @@ function copyright()
   return $final;
   copyright();
 }
-
-
 // Email form
 $errors = [];
 $missing = [];
@@ -32,10 +30,8 @@ if (isset($_POST['send'])) {
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -48,7 +44,6 @@ if (isset($_POST['send'])) {
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Open+Sans:wght@300;400&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/54e170f569.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <!-- navbar -->
   <nav>
@@ -208,10 +203,7 @@ if (isset($_POST['send'])) {
             <span class="warning">Invalid email address</span>
           <?php endif; ?>
         </label>
-        <input type="email" name="email" id="email" <?php
-                                                    if ($errors || $missing) {
-                                                      echo 'value="', htmlentities($email), '"';
-                                                    } ?> />
+        <input type="email" name="email" id="email" <?php if ($errors || $missing) { echo 'value="', htmlentities($email), '"';} ?> />
       </p>
       <p>
         <label for="message">Observatii (Optional):
@@ -329,5 +321,4 @@ if (isset($_POST['send'])) {
   </footer>
   <script src="./script/order-page.js"></script>
 </body>
-
 </html>
