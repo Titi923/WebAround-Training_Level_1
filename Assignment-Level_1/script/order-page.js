@@ -10,16 +10,15 @@ let price = document.querySelector('#thePrice');
 price.innerHTML = goldPrice;
 
 silverSelect.addEventListener('click', function () {
-  price.style.transition = 'all 2s';
+  silverSelect.innerHTML = "Selected";
   price.innerHTML = silverPrice;
 });
 
 goldSelect.addEventListener('click', function () {
-  price.style.transition = 'all 2s';
+  goldSelect.innerHTML = "Selected";
   price.innerHTML = goldPrice;
 });
 
 diamondSelect.addEventListener('click', function () {
-  price.style.transition = 'all 2s';
   price.innerHTML = diamondPrice;
 });
