@@ -747,3 +747,9 @@ select#town {
 .active {
   background: red;
 }
+
+button#select-silver,
+button#select-gold,
+button#select-diamond {
+  font-size: 1.2rem;
+}

@@ -102,7 +102,7 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">100 ron</p>
-            <button class="btn--green-select" id="select-gold" >SELECT</button>
+            <button class="btn--green-select active" id="select-gold" >SELECTED</button>
           </div>
         </div>
         <!-- Card vip -->
@@ -153,6 +153,13 @@ if (isset($_POST['send'])) {
           </div>
         </div>
       </div>
+    </div>
+  </section>
+  <!-- Price -->
+  <section>
+    <div class="flex-center-column">
+      <h2>Pretul</h2>
+      <h3 class="price text-center"><span id="thePrice"></span>&nbsp;ron</h3>
     </div>
   </section>
   <!-- Price contnet -->
@@ -272,12 +279,6 @@ if (isset($_POST['send'])) {
         <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
       </p>
     </form>
-  </section>
-  <section>
-    <div class="flex-center-column">
-      <h2>Pretul</h2>
-      <h3 class="price text-center"><span id="thePrice"></span>&nbsp;ron</h3>
-    </div>
   </section>
   <!-- Footer -->
   <?php include './components/footer.php'; ?>

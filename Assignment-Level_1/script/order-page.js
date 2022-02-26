@@ -14,6 +14,9 @@ silverSelect.addEventListener('click', function () {
   diamondSelect.classList.remove("active");
   goldSelect.classList.remove("active")
   price.innerHTML = silverPrice;
+  silverSelect.innerHTML = "SELECTED";
+  goldSelect.innerHTML = "SELECT";
+  diamondSelect.innerHTML = "SELECT";
 });
 
 goldSelect.addEventListener('click', function () {
@@ -21,6 +24,9 @@ goldSelect.addEventListener('click', function () {
   diamondSelect.classList.remove("active");
   goldSelect.classList.add("active")
   price.innerHTML = goldPrice;
+  silverSelect.innerHTML = "SELECT";
+  goldSelect.innerHTML = "SELECTED";
+  diamondSelect.innerHTML = "SELECT";
 });
 
 diamondSelect.addEventListener('click', function () {
@@ -28,4 +34,7 @@ diamondSelect.addEventListener('click', function () {
   diamondSelect.classList.add("active");
   goldSelect.classList.remove("active")
   price.innerHTML = diamondPrice;
+  silverSelect.innerHTML = "SELECT";
+  goldSelect.innerHTML = "SELECT";
+  diamondSelect.innerHTML = "SELECTED";
 });
