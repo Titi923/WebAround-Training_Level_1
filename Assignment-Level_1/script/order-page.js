@@ -10,15 +10,22 @@ let price = document.querySelector('#thePrice');
 price.innerHTML = goldPrice;
 
 silverSelect.addEventListener('click', function () {
-  silverSelect.innerHTML = "Selected";
+  silverSelect.classList.add("active");
+  diamondSelect.classList.remove("active");
+  goldSelect.classList.remove("active")
   price.innerHTML = silverPrice;
 });
 
 goldSelect.addEventListener('click', function () {
-  goldSelect.innerHTML = "Selected";
+  silverSelect.classList.remove("active");
+  diamondSelect.classList.remove("active");
+  goldSelect.classList.add("active")
   price.innerHTML = goldPrice;
 });
 
 diamondSelect.addEventListener('click', function () {
+  silverSelect.classList.remove("active");
+  diamondSelect.classList.add("active");
+  goldSelect.classList.remove("active")
   price.innerHTML = diamondPrice;
 });
