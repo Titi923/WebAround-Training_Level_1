@@ -19,11 +19,7 @@
       </ul>
     </nav>
     <!-- header -->
-    <header class="container">
-      <div>
-        <img class="img-header" src="./images/HeaderPhoto.png" alt="" />
-      </div>
-    </header>
+    <?php include './components/header.php' ?>
     <!-- main -->
     <main class="container grid grid--1x2">
       <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="550" data-height="400" data-show-text="false"
@@ -748,25 +744,7 @@
       <div id="map"></div>
     </section>
     <!-- Footer -->
-    <footer class="footer">
-      <p class="text-center copy">&copy; Copyright 2014-2022</p>
-      <div>
-        <ul class="container footer-links">
-          <li>
-            <i class="fa-solid fa-file-lines"></i>
-            <a href="">Termeni si conditii</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-bars"></i>
-            <a href="">Conditii generale de paricipare la programe</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-lock"></i>
-            <a href="">Protectia datelor cu caracter personal</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    <?php include("./components/footer.php")?>
     <div class="timer-div">
       Oferta expira in:&nbsp;<span class="timer">15:00:00</span>
     </div>

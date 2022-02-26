@@ -23,24 +23,11 @@
         </ul>
     </nav>
     <!-- header -->
-    <header class="container">
-        <div>
-            <img class="img-header" src="./images/HeaderPhoto.png" alt="" />
-        </div>
-    </header>
+    <?php include("./components/header.php"); ?>
     <!-- Thanks -->
     <h1 class="thanks">Multumim pentru alegerea facuta!</h1>
     <!-- Footer -->
-    <footer class="footer">
-        <p class="text-center copy">&copy; Copyright 2014-2022</p>
-        <div>
-            <ul class="container footer-links">
-                <li><i class="fa-solid fa-file-lines"></i> <a href="">Termeni si conditii</a></li>
-                <li><i class="fa-solid fa-bars"></i> <a href="">Conditii generale de paricipare la programe</a></li>
-                <li><i class="fa-solid fa-lock"></i> <a href="">Protectia datelor cu caracter personal</a></li>
-            </ul>
-        </div>
-    </footer>
+    <?php include("./components/footer.php"); ?>
     <script src="./script/script.js"></script>
 </body>
 
