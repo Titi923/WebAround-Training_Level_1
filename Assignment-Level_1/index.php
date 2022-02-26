@@ -19,7 +19,7 @@
       </ul>
     </nav>
     <!-- header -->
-    <!-- <?php include './components/header.php' ?> -->
+    <?php include './components/header.php' ?>
     <!-- main -->
     <main class="container grid grid--1x2">
       <div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="550" data-height="400" data-show-text="false"
@@ -744,13 +744,13 @@
       <div id="map"></div>
     </section>
     <!-- Footer -->
-    <!-- <?php include './components/footer.php' ?> -->
+    <?php include './components/footer.php' ?>
     <div class="timer-div">
       Oferta expira in:&nbsp;<span class="timer">15:00:00</span>
     </div>
     <div id="fb-root"></div>
     <script src="https://kit.fontawesome.com/54e170f569.js" crossorigin="anonymous"></script>
-    <!-- <script src="./script/script.js"></script> -->
+    <script src="./script/script.js"></script>
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXmM1fs3xpG6AXkoIf8Ol6bHg4fBTKHOI&callback=initMap&libraries=&v=weekly" async></script>
   </body>
