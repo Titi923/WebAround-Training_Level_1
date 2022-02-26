@@ -744,7 +744,7 @@
       <div id="map"></div>
     </section>
     <!-- Footer -->
-    <?php include("./components/footer.php")?>
+    <?php include './components/footer.php' ?>
     <div class="timer-div">
       Oferta expira in:&nbsp;<span class="timer">15:00:00</span>
     </div>

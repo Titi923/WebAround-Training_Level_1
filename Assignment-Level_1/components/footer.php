@@ -5,12 +5,15 @@
       $release_year = 2019;
       $current_year = date('Y');
       if ($release_year == $current_year) {
-        $final = "&copy $current_year";
+        $final = "&copy Copyright $current_year by Andy.";
       } else {
-        $final = "&copy $release_year - $current_year";
+        $final = "&copy Copyright $release_year - $current_year by Andy";
       }
       return $final;
     }
+    echo "<p class='text-center' >";
+    echo copyright();
+    echo "</p>";
   ?>
   <div>
     <ul class="container footer-links">

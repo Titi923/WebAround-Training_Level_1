@@ -23,11 +23,11 @@
         </ul>
     </nav>
     <!-- header -->
-    <?php include("./components/header.php"); ?>
+    <?php include "./components/header.php" ; ?>
     <!-- Thanks -->
     <h1 class="thanks">Multumim pentru alegerea facuta!</h1>
     <!-- Footer -->
-    <?php include("./components/footer.php"); ?>
+    <?php include "./components/footer.php" ; ?>
     <script src="./script/script.js"></script>
 </body>
 
