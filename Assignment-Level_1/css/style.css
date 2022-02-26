@@ -184,12 +184,15 @@ button {
 /* Grid Two-Columns */
 .grid--1x2-floats {
   grid-template-columns: 3fr 1fr;
-  column-gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
+
+.grid--1x2-floats ul, .grid--1x2-floats-left ul {
+  padding: 0;
+}
+
 .grid--1x2-floats-left {
   grid-template-columns: 1fr 3fr;
-  column-gap: 0.5rem;
 }
 
 .features:nth-of-type(even) .features__content {
@@ -203,7 +206,6 @@ button {
 
   .grid--1x2 {
     grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
   }
 
   .pe-scurt h2 {
@@ -595,6 +597,12 @@ td:nth-child(3) {
 
 .about-andy {
   padding: 0 1.2rem;
+}
+
+@media screen and (min-width: 885px) {
+  .grid--1x2-floats .about-andy {
+    padding: 0 0.5rem;
+  }
 }
 
 .no-margins {
