@@ -178,7 +178,8 @@ if (isset($_POST['send'])) {
           <?php endif; ?>
         </label>
         <!-- Keep the input -->
-        <input type="text" name="name" id="name" <?php if ($errors || $missing) { echo 'value=""', htmlentities($name), ''; } ?> />
+        <input type="text" name="name" id="name" <?php if ($errors || $missing) { echo 'value="', htmlentities($name), ''; } ?> />
+        <!-- Keep the input -->
       </p>
       <p>
         <label for="email">*Email:
@@ -206,67 +207,67 @@ if (isset($_POST['send'])) {
         <div class="flex-center">
         <select name="town" id="town">
           <option value="" <?php
-                            if ($_GET && $town == '') :
+                            if ($_POST && $town == '') :
                               echo 'selected';
                             endif; ?>>Alegeti orasul
           </option>
           <option value="Brasov" <?php
-                                  if ($_GET && $town == 'Brasov') :
+                                  if ($_POST && $town == 'Brasov') :
                                     echo 'selected';
                                   endif; ?>>Brasov
           </option>
           <option value="Bucuresti" <?php
-                                    if ($_GET && $town == 'Bucuresti') :
+                                    if ($_POST && $town == 'Bucuresti') :
                                       echo 'selected';
                                     endif; ?>>Bucuresti
           </option>
           <option value="Cluj-Napoca" <?php
-                                      if ($_GET && $town == 'Cluj-Napoca') :
+                                      if ($_POST && $town == 'Cluj-Napoca') :
                                         echo 'selected';
                                       endif; ?>>Cluj-Napoca
           </option>
           <option value="Constanta" <?php
-                                    if ($_GET && $town == 'Constanta') :
+                                    if ($_POST && $town == 'Constanta') :
                                       echo 'selected';
                                     endif; ?>>Constanta
           </option>
           <option value="Craiova" <?php
-                                  if ($_GET && $town == 'Craiova') :
+                                  if ($_POST && $town == 'Craiova') :
                                     echo 'selected';
                                   endif; ?>>Craiova
           </option>
           <option value="Galati" <?php
-                                  if ($_GET && $town == 'Galati') :
+                                  if ($_POST && $town == 'Galati') :
                                     echo 'selected';
                                   endif; ?>>Galati
           </option>
           <option value="Iasi" <?php
-                                if ($_GET && $town == 'Iasi') :
+                                if ($_POST && $town == 'Iasi') :
                                   echo 'selected';
                                 endif; ?>>Iasi
           </option>
           <option value="Oradea" <?php
-                                  if ($_GET && $town == 'Oradea') :
+                                  if ($_POST && $town == 'Oradea') :
                                     echo 'selected';
                                   endif; ?>>Oradea
           </option>
           <option value="Piatra-Neamt" <?php
-                                        if ($_GET && $town == 'Piatra-Neamt') :
+                                        if ($_POST && $town == 'Piatra-Neamt') :
                                           echo 'selected';
                                         endif; ?>>Piatra-Neamt
           </option>
           <option value="Sibiu" <?php
-                                if ($_GET && $town == 'Sibiu') :
+                                if ($_POST && $town == 'Sibiu') :
                                   echo 'selected';
                                 endif; ?>>Sibiu
           </option>
           <option value="Suceava" <?php
-                                  if ($_GET && $town == 'Suceava') :
+                                  if ($_POST && $town == 'Suceava') :
                                     echo 'selected';
                                   endif; ?>>Suceava
           </option>
           <option value="Timisoara" <?php
-                                    if ($_GET && $town == 'Timisoara') :
+                                    if ($_POST && $town == 'Timisoara') :
                                       echo 'selected';
                                     endif; ?>>Timisoara
           </option>
