@@ -1,17 +1,4 @@
 <?php
-// Copyright
-function copyright()
-{
-  $release_year = 2014;
-  $current_year = date('Y');
-  if ($release_year == $current_year) {
-    $final = "&copy $current_year";
-  } else {
-    $final = "&copy $release_year - $current_year";
-  }
-  return $final;
-  copyright();
-}
 // Email form
 $errors = [];
 $missing = [];
@@ -53,11 +40,7 @@ if (isset($_POST['send'])) {
     </ul>
   </nav>
   <!-- header -->
-  <header class="container">
-    <div>
-      <img class="img-header" src="./images/HeaderPhoto.png" alt="" />
-    </div>
-  </header>
+  <?php include './components/header.php'; ?>
   <!-- Cards -->
   <section>
     <h2>Selecteaza un bilet</h2>
@@ -300,25 +283,7 @@ if (isset($_POST['send'])) {
     </div>
   </section>
   <!-- Footer -->
-  <footer class="footer">
-    <p class="text-center copy">Copyright <?= copyright(); ?> by Andy.</p>
-    <div>
-      <ul class="container footer-links">
-        <li>
-          <i class="fa-solid fa-file-lines"></i>
-          <a href="">Termeni si conditii</a>
-        </li>
-        <li>
-          <i class="fa-solid fa-bars"></i>
-          <a href="">Conditii generale de paricipare la programe</a>
-        </li>
-        <li>
-          <i class="fa-solid fa-lock"></i>
-          <a href="">Protectia datelor cu caracter personal</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
+  <?php include './components/footer.php'; ?>
   <script src="./script/order-page.js"></script>
 </body>
 </html>
