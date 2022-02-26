@@ -283,7 +283,7 @@ if (isset($_POST['send'])) {
     </div>
   </section>
   <!-- Footer -->
-  <!-- <?php include './components/footer.php'; ?> -->
+  <?php include './components/footer.php'; ?>
   <script src="./script/order-page.js"></script>
 </body>
 </html>
