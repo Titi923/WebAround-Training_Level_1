@@ -1,9 +1,9 @@
 // select tickets
-let silverSelect = document.querySelector('.select-silver');
+let silverSelect = document.querySelector('#select-silver');
 let silverPrice = 50;
-let goldSelect = document.querySelector('.select-gold');
+let goldSelect = document.querySelector('#select-gold');
 let goldPrice = 100;
-let diamondSelect = document.querySelector('.select-diamond');
+let diamondSelect = document.querySelector('#select-diamond');
 let diamondPrice = 200;
 
 let price = document.querySelector('#thePrice');

@@ -66,7 +66,7 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">50 ron</p>
-            <button class="btn--green-select select-silver">SELECT</button>
+            <button class="btn--green-select" id="select-silver">SELECT</button>
           </div>
         </div>
         <!-- Card gold -->
@@ -102,7 +102,7 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">100 ron</p>
-            <button class="btn--green-select select-gold">SELECT</button>
+            <button class="btn--green-select" id="select-gold" >SELECT</button>
           </div>
         </div>
         <!-- Card vip -->
@@ -149,7 +149,7 @@ if (isset($_POST['send'])) {
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
             <p class="red">200 ron</p>
-            <button class="btn--green-select select-diamond">SELECT</button>
+            <button class="btn--green-select" id="select-diamond" >SELECT</button>
           </div>
         </div>
       </div>
@@ -172,10 +172,7 @@ if (isset($_POST['send'])) {
           <?php endif; ?>
         </label>
         <!-- Keep the input -->
-        <input type="text" name="name" id="name" <?php
-                                                  if ($errors || $missing) {
-                                                    echo 'value="', htmlentities($name), '"';
-                                                  } ?> />
+        <input type="text" name="name" id="name" <?php if ($errors || $missing) { echo 'value="', htmlentities($name), ''; } ?> />
         <!-- Keep the input -->
       </p>
       <p>
