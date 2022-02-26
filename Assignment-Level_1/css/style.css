@@ -670,10 +670,6 @@ td:nth-child(3) {
   transition: background 1s ease;
 }
 
-.btn--green-select:hover {
-  background: #06b406;
-}
-
 .card-price {
   bottom: 0;
 }
