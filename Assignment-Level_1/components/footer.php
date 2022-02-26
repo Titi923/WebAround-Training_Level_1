@@ -11,10 +11,8 @@
       }
       return $final;
     }
-    echo "<p class='text-center' >";
-    echo copyright();
-    echo "</p>";
   ?>
+  <p class="text-center"><?= copyright();?></p>
   <div>
     <ul class="container footer-links">
       <li><i class="fa-solid fa-file-lines"></i> <a href="">Termeni si conditii</a></li>
