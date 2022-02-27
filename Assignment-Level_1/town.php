@@ -1,4 +1,8 @@
 <?php
+// Prices
+$silver = 50;
+$gold = 100;
+$diamond = 200;
 // Email form
 $errors = [];
 $missing = [];
@@ -66,7 +70,7 @@ $town = $_GET['town'];
           </div>
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
-            <p class="red">50 ron</p>
+            <p class="red"><?=$silver?> ron</p>
             <button class="btn--green-select" id="select-silver">SELECT</button>
           </div>
         </div>
@@ -102,7 +106,7 @@ $town = $_GET['town'];
           </div>
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
-            <p class="red">100 ron</p>
+            <p class="red"><?=$gold?> ron</p>
             <button class="btn--green-select active" id="select-gold" >SELECTED</button>
           </div>
         </div>
@@ -149,7 +153,7 @@ $town = $_GET['town'];
           </div>
           <div class="card-price">
             <p class="text-upper">investitia ta:</p>
-            <p class="red">200 ron</p>
+            <p class="red"><?=$diamond?> ron</p>
             <button class="btn--green-select" id="select-diamond" >SELECT</button>
           </div>
         </div>
