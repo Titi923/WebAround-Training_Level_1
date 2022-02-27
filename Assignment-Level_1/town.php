@@ -181,7 +181,6 @@ $town = $_GET['town'];
         </label>
         <!-- Keep the input -->
         <input type="text" name="name" id="name" <?php if ($errors || $missing) { echo 'value="', htmlentities($name), ''; } ?> />
-        <!-- Keep the input -->
       </p>
       <p>
         <label for="email">*Email:
@@ -196,7 +195,7 @@ $town = $_GET['town'];
       <p>
         <label for="message">Observatii (Optional):
         </label>
-        <textarea name="message" id="message" cols="15" rows="5"></textarea>
+        <textarea name="message" id="message" cols="15" rows="5" <?php if ($errors || $missing) { echo 'value="', htmlentities($message), ''; } ?>></textarea>
       </p>
       <!-- Select Town -->
       <p>
