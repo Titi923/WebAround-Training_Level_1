@@ -14,8 +14,8 @@
     <!-- navbar -->
     <nav>
       <ul class="navbar container">
-        <li><a href="#"><img id="andy" src="./images/Andy_Logo.png" alt="" /></a></li>
-        <li><a href="#"><img id="booe" src="./images/Booe_Camp_Logo.png" alt="" /></a></li>
+        <li><a href="./town.php?town="><img id="andy" src="./images/Andy_Logo.png" alt="" /></a></li>
+        <li><a href="./town.php?town="><img id="booe" src="./images/Booe_Camp_Logo.png" alt="" /></a></li>
       </ul>
     </nav>
     <!-- header -->

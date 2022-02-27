@@ -36,8 +36,8 @@ $town = $_GET['town'];
   <!-- navbar -->
   <nav>
     <ul class="navbar container">
-      <li><img id="andy" src="./images/Andy_Logo.png" alt="" /></li>
-      <li><img id="booe" src="./images/Booe_Camp_Logo.png" alt="" /></li>
+      <li><a href="./index.php"><img id="andy" src="./images/Andy_Logo.png" alt="" /></a></li>
+      <li><a href="./index.php"><img id="booe" src="./images/Booe_Camp_Logo.png" alt="" /></a></li>
     </ul>
   </nav>
   <!-- header -->
