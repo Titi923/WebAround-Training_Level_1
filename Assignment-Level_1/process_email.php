@@ -40,7 +40,7 @@ if (!$suspect) {
         if (!$errors && !$missing) {
             $headers = implode("\r\n", $headers);
             // Initalize message
-            $message = '';
+            $the_message = '';
             foreach ($expected as $field) {
                 if (isset($$field) && !empty($$field)) {
                     $val = $$field;
@@ -53,10 +53,10 @@ if (!$suspect) {
                 }
                 // Replace underscores in the field names with spaces
                 $field = str_replace('_', ' ', $field);
-                $message .= ucfirst($field) . ": $val\r\n\r\n";
+                $the_message .= ucfirst($field) . ": $val\r\n\r\n";
             }
-            $message = wordwrap($message, 70);
-            $mailSent = mail($to, $subject, $message, $headers, $authorized);
+            $the_message = wordwrap($the_message, 70);
+            $mailSent = mail($to, $subject, $the_message, $headers, $authorized);
             if (!$mailSent) {
                 $errors['mailfail'] = true;
             }

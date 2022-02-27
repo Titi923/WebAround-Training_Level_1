@@ -708,12 +708,15 @@ td:nth-child(3) {
 }
 
 input, label {
-  text-align: center;
   display:block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+label {
+  text-align: center;
 }
 
 .contact-wrapper input, textarea {

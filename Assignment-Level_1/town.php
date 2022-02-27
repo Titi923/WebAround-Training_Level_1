@@ -196,8 +196,7 @@ $town = $_GET['town'];
       <p>
         <label for="message">Observatii (Optional):
         </label>
-        <textarea name="message" id="message" cols="15" rows="5">
-      </textarea>
+        <textarea name="message" id="message" cols="15" rows="5"></textarea>
       </p>
       <!-- Select Town -->
       <p>
