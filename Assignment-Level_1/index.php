@@ -452,78 +452,78 @@
               <td>⍟Pe 12.02.2019 in <strong>BRASOV</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_9.png" width="50" alt=""></td>
               <td>Hotel Ramada, Sala Ras mezanim <br>Calea Bucuresti 13</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Brasov">Vreau Bilet</a></td>
             </tr>
               <tr><td>⍟Pe 14.02.2019 in <strong>SIBIU</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_10.png" width="50" alt="" /></td>
               <td>Hotel Hilton, Sala Diamond,<br>Str. Padurea Dumbrava 1</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Sibiu">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 14.02.2019 in <strong>CRAIOVA</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_11.png" width="50" alt="" /></td>
               <td>hotel lido,<br>strada constantin brancusi, dolj 10</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Craiova">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 21.02.2019 in <strong>BUCURESTI</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_12.png" width="50" alt="" /></td>
               <td>Hotel Carol, Sala Balroom,<br>strada barbu vacarescu 164A</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Bucuresti">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 12.02.2019 in <strong>CLUJ</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_13.png" width="50" alt="" /></td>
               <td>grand hotel napoca, sala atena,<br>str. octavian goga 1</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Cluj-Napoca">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 28.02.2019 in <strong>ORADEA</strong><br>de la 17:00 la21:30</td>
               <td><img src="./images/image_14.png" width="50" alt="" /></td>
               <td>hotel hiliton, sala varadinum ballroom,<br>aleea strandului 9</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Oradea">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 02.03.2019 in <strong>TIMISOARA</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_15.png" width="50" alt="" /></td>
               <td>hotel timisoara, sala athena,<br>str. marasesti nr. 1-3</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Timisoara">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 07.03.2019 in <strong>CONSTANTA</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_16.png" width="50" alt="" /></td>
               <td>hotel iaki, sala madrid<br>statiunea mamaia</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Constanta">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 09.03.2019 in <strong>GALATI</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_17.png" width="50" alt="" /></td>
               <td>icepronav, strada protului 19A</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Galati">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 19.03.2019 in <strong>IASI</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_18.png" width="50" alt="" /></td>
               <td>palas mall, sala rossini,<br>str. palas 7A</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Iasi">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 21.03.2019 in <strong>SUCEAVA</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_19.png" width="50" alt="" /></td>
               <td>hotel bucovina,<br>str ana ipatescu 5</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Suceava">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 23.03.2019 in <strong>PIATRA NEAMT</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_20.png" width="50" alt="" /></td>
               <td>hotel central plaza, sala milenium,<br>piata petrodava 1-3</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Piatra-Neamt">Vreau Bilet</a></td>
             </tr>
             <tr>
               <td>⍟Pe 26.03.2019 in <strong>BUCURESTI</strong><br>de la 17:00 la 21:30</td>
               <td><img src="./images/image_21.png" width="50" alt="" /></td>
               <td>hotel caro, sala ballroom,<br>strada barbu vacarescu 164A</td>
-              <td><a class="btn--green_dark text-upper" href="./town.php">Vreau Bilet</a></td>
+              <td><a class="btn--green_dark text-upper" href="./town.php?town=Bucuresti">Vreau Bilet</a></td>
             </tr>
           </tbody>
         </table>
