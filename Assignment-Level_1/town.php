@@ -21,7 +21,7 @@ if (isset($_POST['send'])) {
   }
 }
 // Get
-$town = $_GET['town'];
+$town = $_GET['town'] ?? 'not_selected';
 ?>
 <!DOCTYPE html>
 <html lang="en">
