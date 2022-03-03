@@ -196,9 +196,8 @@ $town = $_GET['town'] ?? 'not_selected';
         <input type="email" name="email" id="email" <?php if ($errors || $missing) { echo 'value="'. htmlentities($email). '"'; } ?> />
       </p>
       <p>
-        <label for="message">Observatii (Optional):
-        </label>
-        <textarea name="message" id="message" cols="15" rows="5" <?php if ($errors || $missing) { echo 'value="'. htmlentities($message). '"'; } ?> ></textarea>
+        <label for="message">Observatii (Optional):</label>
+        <textarea name="message" id="message" cols="15" rows="5"><?php if ($errors || $missing) { echo htmlentities($message); } ?></textarea>
       </p>
       <!-- Select Town -->
       <p>
