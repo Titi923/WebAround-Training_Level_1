@@ -178,13 +178,12 @@ $town = $_GET['town'] ?? 'not_selected';
       <?php }; ?>
       <p>
         <label for="name">*Nume:
-          <?php if ($missing && in_array('name', $missing)) :
-          ?>
+          <?php if ($missing && in_array('name', $missing)) : ?>
             <span class="warning">Va rugam sa introduceti numele</span>
           <?php endif; ?>
         </label>
         <!-- Keep the input -->
-        <input type="text" name="name" id="name" <?php if ($errors || $missing) { echo 'value="', htmlentities($name), ''; } ?> />
+        <input type="text" name="name" id="name" <?php if ($errors || $missing) { echo 'value="'. htmlentities($name). '"'; } ?> />
       </p>
       <p>
         <label for="email">*Email:
@@ -194,12 +193,12 @@ $town = $_GET['town'] ?? 'not_selected';
             <span class="warning">Invalid email address</span>
           <?php endif; ?>
         </label>
-        <input type="email" name="email" id="email" <?php if ($errors || $missing) { echo 'value="', htmlentities($email), '"';} ?> />
+        <input type="email" name="email" id="email" <?php if ($errors || $missing) { echo 'value="'. htmlentities($email). '"'; } ?> />
       </p>
       <p>
         <label for="message">Observatii (Optional):
         </label>
-        <textarea name="message" id="message" cols="15" rows="5" <?php if ($errors || $missing) { echo 'value="', htmlentities($message), ''; } ?>></textarea>
+        <textarea name="message" id="message" cols="15" rows="5" <?php if ($errors || $missing) { echo 'value="'. htmlentities($message). '"'; } ?> ></textarea>
       </p>
       <!-- Select Town -->
       <p>
@@ -209,22 +208,22 @@ $town = $_GET['town'] ?? 'not_selected';
           <?php endif; ?>
         </label>
         <div class="flex-center">
-        <select name="town" id="town">
-          <option value="" <?php if ($_GET && $town == '') { echo 'selected'; };?> >Alegeti orasul</option>
-          <option value="Brasov" <?php if ($_GET && $town == 'Brasov') { echo 'selected';};?> >Brasov</option>
-          <option value="Sibiu" <?php if ($_GET && $town == 'Sibiu') { echo 'selected';};?> >Sibiu</option>
-          <option value="Craiova" <?php if ($_GET && $town == 'Craiova') { echo 'selected';};?> >Craiova</option>
-          <option value="Bucuresti" <?php if ($_GET && $town == 'Bucuresti') { echo 'selected';};?> >Bucuresti</option>
-          <option value="Cluj-Napoca" <?php if ($_GET && $town == 'Cluj-Napoca') { echo 'selected';};?> >Cluj-Napoca</option>
-          <option value="Oradea" <?php if ($_GET && $town == 'Oradea') { echo 'selected';};?> >Oradea</option>
-          <option value="Timisoara" <?php if ($_GET && $town == 'Timisoara') { echo 'selected';};?> >Timisoara</option>
-          <option value="Constanta" <?php if ($_GET && $town == 'Constanta') { echo 'selected';};?> >Constanta</option>
-          <option value="Galati" <?php if ($_GET && $town == 'Galati') { echo 'selected';};?> >Galati</option>
-          <option value="Iasi" <?php if ($_GET && $town == 'Iasi') { echo 'selected';};?> >Iasi</option>
-          <option value="Suceava" <?php if ($_GET && $town == 'Suceava') { echo 'selected';};?> >Suceava</option>
-          <option value="Piatra-Neamt" <?php if ($_GET && $town == 'Piatra-Neamt') { echo 'selected';};?> >Piatra-Neamt</option>
-        </select>
-      </div>
+          <select name="town" id="town">
+            <option value="" <?php if ($_GET && $town == '') { echo 'selected'; };?> >Alegeti orasul</option>
+            <option value="Brasov" <?php if ($_GET && $town == 'Brasov') { echo 'selected';};?> >Brasov</option>
+            <option value="Sibiu" <?php if ($_GET && $town == 'Sibiu') { echo 'selected';};?> >Sibiu</option>
+            <option value="Craiova" <?php if ($_GET && $town == 'Craiova') { echo 'selected';};?> >Craiova</option>
+            <option value="Bucuresti" <?php if ($_GET && $town == 'Bucuresti') { echo 'selected';};?> >Bucuresti</option>
+            <option value="Cluj-Napoca" <?php if ($_GET && $town == 'Cluj-Napoca') { echo 'selected';};?> >Cluj-Napoca</option>
+            <option value="Oradea" <?php if ($_GET && $town == 'Oradea') { echo 'selected';};?> >Oradea</option>
+            <option value="Timisoara" <?php if ($_GET && $town == 'Timisoara') { echo 'selected';};?> >Timisoara</option>
+            <option value="Constanta" <?php if ($_GET && $town == 'Constanta') { echo 'selected';};?> >Constanta</option>
+            <option value="Galati" <?php if ($_GET && $town == 'Galati') { echo 'selected';};?> >Galati</option>
+            <option value="Iasi" <?php if ($_GET && $town == 'Iasi') { echo 'selected';};?> >Iasi</option>
+            <option value="Suceava" <?php if ($_GET && $town == 'Suceava') { echo 'selected';};?> >Suceava</option>
+            <option value="Piatra-Neamt" <?php if ($_GET && $town == 'Piatra-Neamt') { echo 'selected';};?> >Piatra-Neamt</option>
+          </select>
+        </div>
       </p>
       <p>
         <input class="btn--green-select" type="submit" name="send" id="send" value="Send Messages" />
